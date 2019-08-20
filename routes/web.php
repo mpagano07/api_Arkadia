@@ -3,6 +3,7 @@
 $router->post('/users/login', ['uses' => 'UsersController@login']);
 $router->post('/users', ['uses' => 'UsersController@createUser']);
 $router->get('/users', ['uses' => 'UsersController@index']);
+$router->get('/', ['uses' => 'UsersController@index']);
 
 $router->get('/', function () use ($router) {
     return $router->app->version();
